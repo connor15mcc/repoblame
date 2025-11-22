@@ -93,12 +93,24 @@ Usage: repoblame [OPTIONS]
 Options:
   -p, --path <PATH>
           Path to a git repository folder (specify a non-root folder if wanting to analyze a subfolder only)
+
       --include-binary
           Include binary files in the blame stats (excluded by default)
+
   -e, --exclude-by-extension <EXCLUDE_BY_EXTENSION>...
-          Optional list of file extension(s) to exclude from the blame stats. Example: --exclude-by-extension lock json
+          Optional list of file extension(s) to exclude from the blame stats. Example: --exclude-by-extension md txt
+
+  -f, --format <FORMAT>
+          [default: table]
+
+          Possible values:
+          - plain: Whitespace-delimited table
+          - table: Table with lines delimiting rows, columns, and headers
+          - json:  Pretty-printed JSON
+
   -h, --help
-          Print help
+          Print help (see a summary with '-h')
+
   -V, --version
           Print version
 ```
