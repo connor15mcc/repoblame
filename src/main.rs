@@ -45,6 +45,10 @@ enum OutputFormat {
 }
 
 fn main() {
+    // Handle SIGPIPE
+    // https://stackoverflow.com/questions/65755853/simple-word-count-rust-program-outputs-valid-stdout-but-panicks-when-piped-to-he/65760807
+    sigpipe::reset();
+
     let args = RepoBlameArgs::parse();
 
     let binding = args.path.unwrap_or(PathBuf::from("."));
