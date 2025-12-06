@@ -58,6 +58,7 @@ Cropped output of `repoblame` on the [django](https://github.com/django/django) 
 - [x] Support analyzing a subfolder of a repo only
 - [x] Exclude binary files by default (and option to include them back in)
 - [x] Option to exclude files by file type
+- [x] Set output format to table (default), plain or json
 - [ ] Automated tests
 - [ ] Option to exclude specific file paths
 - [ ] CI/CD and release packaging
